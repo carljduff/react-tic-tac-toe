@@ -1,0 +1,14 @@
+.board {
+  display: flex;
+  flex-direction: row wrap;
+  width: 600px;
+  height: 600px;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.tile {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
