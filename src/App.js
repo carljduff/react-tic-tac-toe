@@ -5,15 +5,14 @@ import Turn from './components/Turn';
 
 
 function App() {
-  const [turnTitle, setTurnTitle] = useState("")
   const [playerLabel, setPlayerLabel] = useState("X")
 
 
 
   return (
     <div className="App">
-    <Turn turnTitle={turnTitle} setTurnTitle={setTurnTitle} playerLabel={playerLabel} setPlayerLabel={setPlayerLabel}/>
-    <Board turnTitle={turnTitle} setTurnTitle={setTurnTitle} playerLabel={playerLabel} setPlayerLabel={setPlayerLabel}/>
+    <Turn playerLabel={playerLabel} />
+    <Board playerLabel={playerLabel} setPlayerLabel={setPlayerLabel}/>
     </div>
   );
 }

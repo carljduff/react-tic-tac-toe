@@ -1,17 +1,25 @@
 import "../App.css"
 
 const Board = ({playerLabel, setPlayerLabel}) => {
+
     
-        const playerHandler = () => {
+        const boardHandler = (e) => {
             if(playerLabel === "X") {
                 setPlayerLabel("O")
             } else {
                 setPlayerLabel("X")
             }
-            console.log(playerLabel)
+            
+            if(e.target.value === "") {
+                e.target.innerText = playerLabel
+            }
+
+            
+
+
         }
 
-    const btn = <button onClick={playerHandler} className="tile">{playerLabel}</button>
+    const btn = <button onClick={boardHandler} className="tile"></button>
     const tile = [btn, btn, btn, btn, btn, btn, btn, btn, btn]
     return(
         <div className="board">
